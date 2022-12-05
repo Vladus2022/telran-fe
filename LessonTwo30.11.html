@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+
+    <style>
+      /* Сброс стилей для всех элементов */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body,
+      .left,
+      .right {
+        height: 100%;
+      }
+      .left {
+        background: white;
+        width: 50%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding: 5% 10%;
+      }
+      .right {
+        background: blue;
+        width: 50%;
+        position: fixed;
+        left: 50%;
+        top: 0;
+      }
+      .right-figure {
+        height: 100%;
+      }
+      .right-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .title {
+        font-size: 50px;
+      }
+      .subtitle {
+        font-size: 20px;
+        font-weight: 400;
+        color: gray;
+        margin-top: 25px;
+      }
+      .form {
+        margin-top: 20px;
+      }
+      .h3 {
+        margin-bottom: 5px;
+      }
+      .row {
+        margin: 15px 0;
+      }
+      button {
+        width: 100%;
+        border: none;
+        padding: 10px 0;
+        font-size: 16px;
+        color: white;
+        background: blue;
+        border-radius: 8px;
+      }
+      input {
+        width: 100%;
+        font-size: 16px;
+        padding: 5px;
+        border-radius: 8px;
+        border: 1px solid lightgray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="left">
+      <h1 class="title">Log in</h1>
+      <h2 class="subtitle">Lorem ipsum dolor sit amet consectetur.</h2>
+
+      <form>
+        <div class="row">
+          <h3>Email</h3>
+          <input type="email"
+        </div>
+
+        <div class="row">
+          <h3>Password</h3>
+          <input type="password"
+        </div>
+
+        <div class="row">
+          <button>Sign in</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="right">
+      <figure class="right-figure">
+        <img
+          src="https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt=""
+          class="right-image"
+        />
+      </figure>
+    </div>
+  </body>
+</html>
