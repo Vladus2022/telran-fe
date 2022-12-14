@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refuel</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Nunito:wght@800&display=swap");
+      html,
+      body {
+        min-height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 20px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+      .menu-link {
+        color: black;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .menu-link-important {
+        background: green;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+      }
+      .main {
+        display: flex;
+      }
+      .main-left {
+        flex: 3;
+      }
+      .main-right {
+        flex: 7;
+      }
+      .desc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .main-title {
+        font-size: 50px;
+
+        font-family: "Lato", sans-serif;
+      }
+      .text {
+        font-size: 15px;
+        color: grey;
+      }
+      .item1,
+      .item2,
+      .item3 {
+        width: 300px;
+        height: 180px;
+        border-radius: 10%;
+        border: 1px solid;
+        border-color: grey;
+        padding: 20px;
+        margin: 20px;
+      }
+      .app-links {
+        display: flex;
+        justify-content: space-between;
+      }
+      .apple-store {
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <figure class="logo">
+          <img
+            class="logo-image"
+            src="https://via.placeholder.com/100x50"
+            alt=""
+          />
+        </figure>
+        <menu class="menu">
+          <li class="menu-item">
+            <a class="menu-link" href="">Home</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">Feature</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">Screen</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">Pricing</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">Team</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">Questions</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu link menu-link-important" href="">Get started</a>
+          </li>
+        </menu>
+      </header>
+      <main class="main">
+        <div class="main-left">
+          <h1 class="main-title">Refueling a car at your addres</h1>
+          <p class="text">Delivery service for alltypes of fuel foryour car</p>
+        </div>
+        <div class="main-right">
+          <figure>
+            <img src="https://via.placeholder.com/550x400" alt="" />
+          </figure>
+        </div>
+      </main>
+      <div class="desc">
+        <div class="item1">
+          <h3 class="table-title">Specified order</h3>
+          <p class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div class="item2">
+          <h3 class="table-title">Delivery</h3>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div class="item3">
+          <h3 class="table-title">Payment type</h3>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
