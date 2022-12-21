@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web chat</title>
+
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body,
+      .wrapper {
+        height: 100%;
+      }
+      
+      .wrapper {
+        display: flex;
+      }
+      figure {
+      margin: 20px;
+      }
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #f3f5f7;
+        width: 200px;
+        
+        
+
+      }
+      .inbox {
+        background: #ffffff;
+        width: 300px;
+      }
+      .chat {
+        background: #f3f5f7;
+        width: calc(100% - 550px);
+      }
+      .panel {
+        background: #ffffff;
+        width: 50px;
+      }
+      .menu {
+        flex: 6;
+        display: flex;
+       
+        justify-content: space-between;
+        flex-direction: column;
+        text-decoration: none;
+        list-style: none;
+        padding-left: 20px;
+        
+        padding-bottom: 100px;
+        
+        
+      }
+      .menu-link {
+        color: #393b3c;
+        text-decoration: none;
+    }
+      
+      .projects {
+        
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        
+        
+      }
+      .result {
+        color: #393b3c;
+      }
+      .project-icon1,
+      .project-icon2,
+      .project-icon3,
+      .project-icon4 {
+        height: 15px;
+        aspect-ratio: 1;
+        border: 2px solid;
+        border-radius: 5px;
+      }
+      .project-icon1 {
+        color: #cf674c;
+      }
+      .project-icon2 {
+        color: #4c84ce;
+      }
+      .project-icon3 {
+        color: #4d23bc;
+      }
+      .project-icon4 {
+        color: #85b69d;
+      }
+
+
+      .projects__header-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+      }
+      .icon-link {
+        display: flex;
+        gap: 5px;
+      }
+      .project-result {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25px;
+        aspect-ratio: 1;
+        border: 1px;
+        border-radius: 5px;
+        background:#e7e9ef ;
+        color: #8f979d;
+        font-size: 13px;
+        
+        
+      }
+      
+      .down-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        border-color: lightgray;
+        border-radius: 10px;
+        /* text-align: center; */
+        height: 30px;
+        width: 160px;
+      }
+      .text-button {
+        color: #393b3c;
+        text-decoration: none;
+        
+      }
+     
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <figure class="logo">
+          <img
+            class="logo-image"
+            src="https://via.placeholder.com/150x50"
+            alt=""
+          />
+        </figure>
+        <menu class="menu">
+          <li class="menu-item">
+            <a class="menu-link" href="">Dashboard</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">Statistic</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">Support</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">Inbox</a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-link" href="">Goals</a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-link" href="">Links</a>
+          </li>
+        </menu>
+
+          <div class="projects">
+            <header class="projects__header">
+              <h4 class="projects__header-name">PROJECTS</h4>
+            </header>
+
+            <div class="projects__header-link">
+                <div class="icon-link">
+                <div class="project-icon1"></div>
+             <h5 class="result">Callipso</h5>
+                </div>
+             <div class="project-result">+4</div>
+            </div>
+            <div class="projects__header-link">
+                <div class="icon-link">
+                <div class="project-icon2"></div>
+              <h5 class="result">BWS bank</h5>
+            </div>
+              <div class="project-result">+5</div>
+            </div>
+            <div class="projects__header-link">
+                <div class="icon-link">
+                <div class="project-icon3"></div>
+             <h5 class="result">Unicorn app</h5>
+            </div>
+             <div class="project-result">+1</div>
+            </div>
+               <div class="projects__header-link">
+                <div class="icon-link">
+                
+                <div class="project-icon4"></div>
+             <h5 class="result">Salt</h5>
+            </div>
+             <div class="project-result">+3</div>
+            </div>
+
+            <div class="down-button">
+              <a aria-colcount="menu-link" class="text-button" href="">Show more</a>
+            </div>
+          </div>
+        
+      </aside>
+
+      <div class="inbox">1</div>
+      <div class="chat">1</div>
+      <div class="panel">1</div>
+    </div>
+  </body>
+</html>
