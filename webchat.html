@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web chat</title>
-
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
     <style>
       * {
         margin: 0;
@@ -18,57 +19,51 @@
       body,
       .wrapper {
         height: 100%;
+        font-family: "Montserrat", sans-serif;
       }
-      
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Montserrat:wght@700&display=swap");
       .wrapper {
         display: flex;
       }
-      figure {
-      margin: 20px;
+      .logo {
+        margin: 20px;
+        padding-bottom: 40px;
+        padding-top: 10px;
       }
       .sidebar {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         background: #f3f5f7;
-        width: 200px;
-        
-        
-
+        width: 250px;
       }
       .inbox {
         background: #ffffff;
-        width: 300px;
+        width: 400px;
       }
       .chat {
-        background: #f3f5f7;
-        width: calc(100% - 550px);
+        background: #f9f9f9;
+        width: calc(100% - 730px);
       }
       .panel {
         background: #ffffff;
-        width: 50px;
+        width: 80px;
       }
       .menu {
         flex: 6;
         display: flex;
-       
         justify-content: space-between;
         flex-direction: column;
         text-decoration: none;
         list-style: none;
         padding-left: 20px;
-        
         padding-bottom: 100px;
-        
-        
       }
       .menu-link {
         color: #393b3c;
         text-decoration: none;
-    }
-      
+      }
       .projects {
-        
         flex: 4;
         display: flex;
         flex-direction: column;
@@ -76,8 +71,6 @@
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 30px;
-        
-        
       }
       .result {
         color: #393b3c;
@@ -103,13 +96,10 @@
       .project-icon4 {
         color: #85b69d;
       }
-
-
       .projects__header-link {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
       }
       .icon-link {
         display: flex;
@@ -123,13 +113,10 @@
         aspect-ratio: 1;
         border: 1px;
         border-radius: 5px;
-        background:#e7e9ef ;
+        background: #e7e9ef;
         color: #8f979d;
         font-size: 13px;
-        
-        
       }
-      
       .down-button {
         display: flex;
         justify-content: center;
@@ -137,17 +124,351 @@
         border: 1px solid;
         border-color: lightgray;
         border-radius: 10px;
-        /* text-align: center; */
+        text-align: center;
         height: 30px;
         width: 160px;
       }
       .text-button {
         color: #393b3c;
         text-decoration: none;
-        
       }
-     
-
+      .header-inbox {
+        display: flex;
+        justify-content: space-between;
+      }
+      .avatar__image {
+        border-radius: 18px;
+      }
+      .avatar__indicator {
+        background: green;
+        height: 20px;
+        aspect-ratio: 1;
+        display: inline-block;
+        border-radius: 50%;
+        position: absolute;
+        right: 2px;
+        bottom: 5px;
+        border: 4px solid white;
+      }
+      .avatar {
+        position: relative;
+        width: 55px;
+        aspect-ratio: 1;
+      }
+      .inbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+      }
+      .inbox__top {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        height: 20%;
+      }
+      .inbox__bottom {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .discribe {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 40px;
+        border: 1px solid;
+        padding: 3px;
+        border-radius: 10px;
+        border: none;
+        background: #f3f5f7;
+      }
+      .general {
+        width: 50%;
+        border-radius: 8px;
+        border: none;
+        background: #fff;
+      }
+      .total {
+        width: 50%;
+        background: #f3f5f7;
+        border: none;
+      }
+      .inbox__contact-grey {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        height: 70px;
+        border: none;
+        border-radius: 20px;
+        padding: 8px;
+        background: #f3f5f6;
+      }
+      .inbox__number {
+        height: 25px;
+        aspect-ratio: 1;
+        border: 1 px solid black;
+        border-radius: 50%;
+        font-size: 15px;
+        background: #4a6bda;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+      }
+      .inbox__contact {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        height: 70px;
+        border-bottom: 1px #ebebee solid;
+        padding: 8px;
+      }
+      .contact-information {
+        display: flex;
+        flex-direction: column;
+      }
+      .chat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .chat__top-contact {
+        display: flex;
+        align-items: center;
+      }
+      .chat__top-avatar-image {
+        border-radius: 50%;
+      }
+      .chat__top-avatar {
+        position: relative;
+        width: 60px;
+        aspect-ratio: 1;
+        margin-left: 20px;
+      }
+      .top__avatar-indicator {
+        background: green;
+        height: 20px;
+        aspect-ratio: 1;
+        display: inline-block;
+        border-radius: 50%;
+        position: absolute;
+        right: 2px;
+        bottom: 5px;
+        border: 4px solid white;
+      }
+      .contact__title,
+      .contact__profession {
+        color: grey;
+      }
+      .search-top {
+        display: flex;
+        padding-right: 20px;
+        gap: 15px;
+      }
+      .search__input {
+        border: none;
+        background: none;
+      }
+      .search__input:focus {
+        outline: none;
+      }
+      .search {
+        border: 1px solid grey;
+        width: 200px;
+        border-radius: 10px;
+        padding: 5px;
+        background: #f3f5f7;
+        display: flex;
+        justify-content: space-between;
+      }
+      .search__button {
+        border: none;
+        font-size: 20px;
+        background: none;
+        color: #899198;
+      }
+      .search__button-item,
+      .search__button-send,
+      .search__button-image,
+      .search__button-voice,
+      .search__button-plus {
+        background: none;
+        height: 34.5px;
+        aspect-ratio: 1;
+        border: 1px solid grey;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #899198;
+      }
+      .search__button-image,
+      .search__button-voice {
+        background: #e7e9ef;
+      }
+      .search__button-plus {
+        color: black;
+      }
+      .chat__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid grey;
+        width: 100%;
+        height: 10%;
+        background: white;
+        padding: 10px;
+      }
+      .chat__input {
+        border-top: 1px solid grey;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+      }
+      .chat__input-button {
+        display: flex;
+        gap: 15px;
+      }
+      .chat__chat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 80%;
+        padding: 30px;
+      }
+      .text-massage {
+        color: grey;
+      }
+      .chat-date {
+        color: grey;
+      }
+      .massage-text-incoming {
+        border: none;
+        height: 40px;
+        width: 70px;
+        background: white;
+        border-radius: 10px 10px 0px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .massage-text-outcoming {
+        border: none;
+        height: 40px;
+        width: 70px;
+        background: #f3f5f7;
+        border-radius: 10px 10px 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .massage-icon-hand {
+        color: #ffd04b;
+        font-size: 20px;
+      }
+      .chat__chat-massage-frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        height: 40px;
+        width: 250px;
+        background: white;
+        border-radius: 10px 10px 0px 10px;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+      .chat__chat-outmassage-frame,
+      .chat__chat-outmassage-catch,
+      .chat__chat-outmassage-brief {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        height: 40px;
+        width: 250px;
+        background: #f3f5f7;
+        border-radius: 10px 10px 10px 0px;
+        gap: 10px;
+      }
+      .chat__chat-outmassage-catch {
+        width: 120px;
+      }
+      .chat__chat-outmassage-brief {
+        width: 150px;
+      }
+      .chat__chat-inmassage-frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        height: 40px;
+        width: 300px;
+        background: white;
+        border-radius: 10px 10px 0px 10px;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+      .chat__chat-massage-icon {
+        font-size: 20px;
+      }
+      .chat__chat-massage-voice,
+      .word-icon {
+        font-size: 30px;
+        color: #4a6bda;
+      }
+      .brief-doc {
+        color: #4a6bda;
+      }
+      .chat__chat-massage-incoming,
+      .chat__chat-massage-incoming-voice {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      .massage-time {
+        color: grey;
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+      .search__input-down {
+        border: none;
+        background: none;
+        width: 100%;
+      }
+      .search__input-down:focus {
+        outline: none;
+      }
+      .search-down {
+        border: none;
+        width: 350px;
+        background: #f9f9f9;
+        padding: 5px;
+      }
+      .search__button-send {
+        background: #4a6bda;
+        color: #ffffff;
+      }
+      .panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 37px;
+      }
+      .panel__input-button {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
     </style>
   </head>
   <body>
@@ -162,72 +483,340 @@
         </figure>
         <menu class="menu">
           <li class="menu-item">
+            <i class="las la-cube"></i>
             <a class="menu-link" href="">Dashboard</a>
           </li>
           <li class="menu-item">
+            <i class="las la-signal"></i>
             <a class="menu-link" href="">Statistic</a>
           </li>
           <li class="menu-item">
+            <i class="lar la-comment-alt"></i>
             <a class="menu-link" href="">Support</a>
           </li>
           <li class="menu-item">
+            <i class="las la-envelope-open"></i>
             <a class="menu-link" href="">Inbox</a>
           </li>
-
           <li class="menu-item">
+            <i class="las la-rocket"></i>
             <a class="menu-link" href="">Goals</a>
           </li>
-
           <li class="menu-item">
+            <i class="las la-link"></i>
             <a class="menu-link" href="">Links</a>
           </li>
         </menu>
-
-          <div class="projects">
-            <header class="projects__header">
-              <h4 class="projects__header-name">PROJECTS</h4>
-            </header>
-
-            <div class="projects__header-link">
-                <div class="icon-link">
-                <div class="project-icon1"></div>
-             <h5 class="result">Callipso</h5>
-                </div>
-             <div class="project-result">+4</div>
+        <div class="projects">
+          <header class="projects__header">
+            <h4 class="projects__header-name">PROJECTS</h4>
+          </header>
+          <div class="projects__header-link">
+            <div class="icon-link">
+              <div class="project-icon1"></div>
+              <h5 class="result">Callipso</h5>
             </div>
-            <div class="projects__header-link">
-                <div class="icon-link">
-                <div class="project-icon2"></div>
+            <div class="project-result">+4</div>
+          </div>
+          <div class="projects__header-link">
+            <div class="icon-link">
+              <div class="project-icon2"></div>
               <h5 class="result">BWS bank</h5>
             </div>
-              <div class="project-result">+5</div>
+            <div class="project-result">+5</div>
+          </div>
+          <div class="projects__header-link">
+            <div class="icon-link">
+              <div class="project-icon3"></div>
+              <h5 class="result">Unicorn app</h5>
             </div>
-            <div class="projects__header-link">
-                <div class="icon-link">
-                <div class="project-icon3"></div>
-             <h5 class="result">Unicorn app</h5>
+            <div class="project-result">+1</div>
+          </div>
+          <div class="projects__header-link">
+            <div class="icon-link">
+              <div class="project-icon4"></div>
+              <h5 class="result">Salt</h5>
             </div>
-             <div class="project-result">+1</div>
-            </div>
-               <div class="projects__header-link">
-                <div class="icon-link">
-                
-                <div class="project-icon4"></div>
-             <h5 class="result">Salt</h5>
-            </div>
-             <div class="project-result">+3</div>
-            </div>
+            <div class="project-result">+3</div>
+          </div>
+          <div class="down-button">
+            <a aria-colcount="menu-link" class="text-button" href=""
+              >Show more</a
+            >
+          </div>
+        </div>
+      </aside>
+      <div class="inbox">
+        <div class="inbox__top">
+          <header class="header-inbox">
+            <h1>InBox</h1>
+            <button class="search__button-plus">
+              <i class="las la-plus"></i>
+            </button>
+          </header>
 
-            <div class="down-button">
-              <a aria-colcount="menu-link" class="text-button" href="">Show more</a>
+          <form class="discribe">
+            <button class="general">General</button>
+            <button class="total">Total</button>
+          </form>
+        </div>
+        <div class="inbox__bottom">
+          <div class="inbox__contact-grey">
+            <div class="inbox__contact-grey">
+              <figure class="avatar">
+                <img
+                  class="avatar__image"
+                  src="https://via.placeholder.com/55"
+                  alt=""
+                />
+                <span class="avatar__indicator"></span>
+              </figure>
+              <div class="contact-information">
+                <h3 class="contact__name">Michael.B</h3>
+                <h4 class="contact__profession">Project manager</h4>
+                <p class="contact__massage">Sent you the file</p>
+              </div>
+            </div>
+            <p class="inbox__number">2</p>
+          </div>
+          <div class="inbox__contact-grey">
+            <div class="inbox__contact-grey">
+              <figure class="avatar">
+                <img
+                  class="avatar__image"
+                  src="https://via.placeholder.com/55"
+                  alt=""
+                />
+                <span class="avatar__indicator"></span>
+              </figure>
+              <div class="contact-information">
+                <h3 class="contact__name">Katie.W</h3>
+                <h4 class="contact__profession">Middle designer</h4>
+                <p class="contact__massage">See you tomorrow</p>
+              </div>
+            </div>
+            <p class="inbox__number">3</p>
+          </div>
+          <div class="inbox__contact">
+            <figure class="avatar">
+              <img
+                class="avatar__image"
+                src="https://via.placeholder.com/55"
+                alt=""
+              />
+            </figure>
+            <div class="contact-information">
+              <h3 class="contact__name">Arnold.J</h3>
+              <h4 class="contact__profession">UI designer</h4>
+              <p class="contact__massage">Hi! I checked the layout agai...</p>
             </div>
           </div>
-        
-      </aside>
+          <div class="inbox__contact">
+            <figure class="avatar">
+              <img
+                class="avatar__image"
+                src="https://via.placeholder.com/55"
+                alt=""
+              />
+              <span class="avatar__indicator"></span>
+            </figure>
+            <div class="contact-information">
+              <h3 class="contact__name">Fannie.K</h3>
+              <h4 class="contact__profession">HR manager</h4>
+              <p class="contact__massage">okay!</p>
+            </div>
+          </div>
+          <div class="inbox__contact">
+            <figure class="avatar">
+              <img
+                class="avatar__image"
+                src="https://via.placeholder.com/55"
+                alt=""
+              />
+            </figure>
+            <div class="contact-information">
+              <h3 class="contact__name">Isaac.A</h3>
+              <h4 class="contact__profession">SMM manager</h4>
+              <p class="contact__massage">
+                I don't think we're going to finish...
+              </p>
+            </div>
+          </div>
+          <div class="inbox__contact">
+            <figure class="avatar">
+              <img
+                class="avatar__image"
+                src="https://via.placeholder.com/55"
+                alt=""
+              />
+            </figure>
+            <div class="contact-information">
+              <h3 class="contact__name">Jacob</h3>
+              <h4 class="contact__profession">UX Designer</h4>
+              <p class="contact__massage">
+                Sorry, Friend. I won't do it again!
+              </p>
+            </div>
+          </div>
+          <div class="inbox__contact">
+            <figure class="avatar">
+              <img
+                class="avatar__image"
+                src="https://via.placeholder.com/55"
+                alt=""
+              />
+            </figure>
+            <div class="contact-information">
+              <h3 class="contact__name">Lisa.O</h3>
+              <h4 class="contact__profession">Online 1 hour ago</h4>
+              <p class="contact__massage"></p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div class="inbox">1</div>
-      <div class="chat">1</div>
-      <div class="panel">1</div>
+      <div class="chat">
+        <div class="chat__top">
+          <div class="chat__top-contact">
+            <figure class="chat__top-avatar">
+              <img
+                class="chat__top-avatar-image"
+                src="https://via.placeholder.com/60"
+                alt=""
+              />
+              <span class="top__avatar-indicator"></span>
+            </figure>
+            <div class="contact__content">
+              <h3 class="contact__name">Michael.B</h3>
+              <h4 class="contact__title">Online</h4>
+            </div>
+          </div>
+          <div class="search-top">
+            <form class="search">
+              <input class="search__input" type="text" />
+              <button class="search__button">
+                <i class="las la-search"></i>
+              </button>
+            </form>
+            <button class="search__button-item">
+              <i class="las la-microphone"></i>
+            </button>
+            <button class="search__button-item">
+              <i class="las la-video"></i>
+            </button>
+          </div>
+        </div>
+        <div class="chat__chat">
+          <div class="chat__chat-massage">
+            <h5 class="chat-date">July 29, Tuesday</h5>
+          </div>
+          <div class="chat__chat-massage-incoming">
+            <p class="massage-time">12:25</p>
+            <div class="massage-text-incoming">
+              <p class="">Hello!</p>
+            </div>
+          </div>
+          <div class="chat__chat-massage-incoming-voice">
+            <div class="chat__chat-massage-frame">
+              <div class="chat__chat-massage-icon">
+                <i class="las la-play"></i>
+              </div>
+              <div class="chat__chat-massage-voice">
+                <i class="las la-barcode"></i>
+                <i class="las la-barcode"></i>
+                <i class="las la-barcode"></i>
+              </div>
+              <div class="chat__chat-massage-time">00:16</div>
+            </div>
+            <p class="massage-time">VIEWED AT</p>
+          </div>
+          <div class="chat__chat-massage-outcoming">
+            <p class="massage-time">12:28</p>
+            <div class="massage-text-outcoming">
+              <p class="">Hi!</p>
+              <span class="massage-icon-hand">
+                <i class="las la-hand-paper"></i>
+              </span>
+            </div>
+          </div>
+          <div class="chat__chat-massage-outcoming-voice">
+            <div class="chat__chat-outmassage-frame">
+              <div class="chat__chat-massage-icon">
+                <i class="las la-play"></i>
+              </div>
+              <div class="chat__chat-massage-voice">
+                <i class="las la-barcode"></i>
+                <i class="las la-barcode"></i>
+                <i class="las la-barcode"></i>
+              </div>
+              <div class="chat__chat-massage-time">00:08</div>
+            </div>
+          </div>
+          <div class="chat__chat-massage-incoming-voice">
+            <p class="massage-time">12:29</p>
+            <div class="chat__chat-inmassage-frame">
+              <p>Okay,thank you very much for the speed</p>
+            </div>
+            <p class="massage-time">VIEWED AT</p>
+          </div>
+          <div class="chat__chat-massage-outcoming-voice">
+            <p class="massage-time">12:30</p>
+            <div class="chat__chat-outmassage-catch">
+              <p>Catch</p>
+              <span class="massage-icon-hand">
+                <i class="las la-otter"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="chat__chat-massage-outcoming-voice">
+            <div class="chat__chat-outmassage-brief">
+              <span class="word-icon">
+                <i class="lab la-wordpress"></i>
+              </span>
+              <div class="chat__chat-brief">
+                <p class="brief-doc">Brief.doc</p>
+                <p class="massage-time">148 KB</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat__input">
+          <div class="chat__input-massage">
+            <p class="text-massage">Write a massage...</p>
+          </div>
+          <form class="search-down">
+            <input class="search__input-down" type="text" />
+          </form>
+          <form class="chat__input-button">
+            <button class="search__button-image">
+              <i class="las la-image"></i>
+            </button>
+            <button class="search__button-voice">
+              <i class="las la-microphone"></i>
+            </button>
+            <button class="search__button-send">
+              <i class="las la-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="panel">
+        <button class="search__button-item">
+          <i class="las la-ellipsis-h"></i>
+        </button>
+        <form class="panel__input-button">
+          <button class="search__button-item">
+            <i class="las la-exclamation-circle"></i>
+          </button>
+          <button class="search__button-item">
+            <i class="las la-bell-slash"></i>
+          </button>
+          <button class="search__button-item">
+            <i class="las la-trash-alt"></i>
+          </button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
